@@ -13,5 +13,10 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div style="margin: 50% auto;display: block;text-align: center;">
+    <ion-button (click)="doPost()">Post Request</ion-button>
+    <!-- <ion-button (click)="capdoPost()">Capacitor Post </ion-button> -->
+  </div>
+  <ion-text *ngIf="error" color="danger">{{error | json}}</ion-text>
+  <ion-text *ngIf="res" color="primary">{{res | json}}</ion-text>
 </ion-content>
